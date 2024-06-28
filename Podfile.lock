@@ -1,0 +1,18 @@
+PODS:
+  - CoinbaseWalletSDK (1.0.3):
+    - CoinbaseWalletSDK/Client (= 1.0.3)
+  - CoinbaseWalletSDK/Client (1.0.3)
+
+DEPENDENCIES:
+  - CoinbaseWalletSDK (= 1.0.3)
+
+SPEC REPOS:
+  trunk:
+    - CoinbaseWalletSDK
+
+SPEC CHECKSUMS:
+  CoinbaseWalletSDK: 304652e641f9fb265082ff3f3e8c4f45e695e947
+
+PODFILE CHECKSUM: 346a818097b1615062f3a76beae426de56f96b84
+
+COCOAPODS: 1.15.2

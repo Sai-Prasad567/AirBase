@@ -1,0 +1,6 @@
+framework module Pods_AirBase_AirBaseUITests {
+  umbrella header "Pods-AirBase-AirBaseUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module Pods_AirBase {
+  umbrella header "Pods-AirBase-umbrella.h"
+
+  export *
+  module * { export * }
+}

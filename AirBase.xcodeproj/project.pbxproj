@@ -1,0 +1,863 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 60;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7EE1D4754330F2323D14C2BD /* Pods_AirBaseTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C3F7ED8261E146413828A5 /* Pods_AirBaseTests.framework */; };
+		A52BBDB64B405E4FA331FA89 /* Pods_AirBase_AirBaseUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F14AAB12C72196FBB57F219 /* Pods_AirBase_AirBaseUITests.framework */; };
+		E4106241AE8F3CAC2B044A4B /* Pods_AirBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7A197CBC9F8579BB2917D51 /* Pods_AirBase.framework */; };
+		F493C3CF2C294D02008B5098 /* AirBaseAppInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F493C3CE2C294D02008B5098 /* AirBaseAppInfo.swift */; };
+		F493C3D12C295407008B5098 /* AirBaseShowNearbyDevicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F493C3D02C295407008B5098 /* AirBaseShowNearbyDevicesView.swift */; };
+		F493C3D32C29557D008B5098 /* AirBaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F493C3D22C29557D008B5098 /* AirBaseTableViewCell.swift */; };
+		F493C3D52C2955B9008B5098 /* AirBaseCheckButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F493C3D42C2955B9008B5098 /* AirBaseCheckButton.swift */; };
+		F493C3D72C295804008B5098 /* AirBaseBgColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F493C3D62C295804008B5098 /* AirBaseBgColors.swift */; };
+		F493C3D92C297488008B5098 /* AirBaseDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = F493C3D82C297488008B5098 /* AirBaseDelegates.swift */; };
+		F493C3DB2C29A85B008B5098 /* AirBaseControllerUitilityExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F493C3DA2C29A85B008B5098 /* AirBaseControllerUitilityExtension.swift */; };
+		F493C3DD2C29DECF008B5098 /* AirBaseCoinBaseConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F493C3DC2C29DECF008B5098 /* AirBaseCoinBaseConnection.swift */; };
+		F493C3DF2C2AE317008B5098 /* AirBaseAlertWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = F493C3DE2C2AE317008B5098 /* AirBaseAlertWindow.swift */; };
+		F493C3E12C2BE357008B5098 /* AirBaseUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = F493C3E02C2BE357008B5098 /* AirBaseUserDefaults.swift */; };
+		F493C3E32C2C7036008B5098 /* AirBaseKeyBoardInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F493C3E22C2C7036008B5098 /* AirBaseKeyBoardInputView.swift */; };
+		F493C3E52C2C708E008B5098 /* AirBaseNumberKeyPad.swift in Sources */ = {isa = PBXBuildFile; fileRef = F493C3E42C2C708E008B5098 /* AirBaseNumberKeyPad.swift */; };
+		F49ED3FC2C27CB520062D669 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49ED3FB2C27CB520062D669 /* AppDelegate.swift */; };
+		F49ED3FE2C27CB520062D669 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49ED3FD2C27CB520062D669 /* SceneDelegate.swift */; };
+		F49ED4002C27CB520062D669 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49ED3FF2C27CB520062D669 /* ViewController.swift */; };
+		F49ED4032C27CB520062D669 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = F49ED4022C27CB520062D669 /* Base */; };
+		F49ED4052C27CB530062D669 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F49ED4042C27CB530062D669 /* Assets.xcassets */; };
+		F49ED4082C27CB530062D669 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = F49ED4072C27CB530062D669 /* Base */; };
+		F49ED4132C27CB530062D669 /* AirBaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49ED4122C27CB530062D669 /* AirBaseTests.swift */; };
+		F49ED41D2C27CB530062D669 /* AirBaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49ED41C2C27CB530062D669 /* AirBaseUITests.swift */; };
+		F49ED41F2C27CB530062D669 /* AirBaseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49ED41E2C27CB530062D669 /* AirBaseUITestsLaunchTests.swift */; };
+		F49ED42E2C27CB950062D669 /* NearbyConnections in Frameworks */ = {isa = PBXBuildFile; productRef = F49ED42D2C27CB950062D669 /* NearbyConnections */; };
+		F49ED4302C27CBB30062D669 /* AirBaseReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49ED42F2C27CBB30062D669 /* AirBaseReceiver.swift */; };
+		F49ED4322C27CBC60062D669 /* AirBaseSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49ED4312C27CBC60062D669 /* AirBaseSender.swift */; };
+		F49ED4342C27CBD90062D669 /* AirBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49ED4332C27CBD90062D669 /* AirBaseViewController.swift */; };
+		F49ED4362C27CBF50062D669 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49ED4352C27CBF50062D669 /* Extensions.swift */; };
+		F49ED4382C27CC0B0062D669 /* SendMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49ED4372C27CC0B0062D669 /* SendMoneyViewController.swift */; };
+		F49ED43A2C27CC250062D669 /* ReceiveMoneyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49ED4392C27CC250062D669 /* ReceiveMoneyViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F49ED40F2C27CB530062D669 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F49ED3F02C27CB520062D669 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F49ED3F72C27CB520062D669;
+			remoteInfo = AirBase;
+		};
+		F49ED4192C27CB530062D669 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F49ED3F02C27CB520062D669 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F49ED3F72C27CB520062D669;
+			remoteInfo = AirBase;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2A8AF9647F71BB46B1F0B6DC /* Pods-AirBase-AirBaseUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirBase-AirBaseUITests.release.xcconfig"; path = "Target Support Files/Pods-AirBase-AirBaseUITests/Pods-AirBase-AirBaseUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6804FD1BA5B3285C11043BB0 /* Pods-AirBaseTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirBaseTests.debug.xcconfig"; path = "Target Support Files/Pods-AirBaseTests/Pods-AirBaseTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6E67ABBCBD4FF9F0F999ACBE /* Pods-AirBase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirBase.release.xcconfig"; path = "Target Support Files/Pods-AirBase/Pods-AirBase.release.xcconfig"; sourceTree = "<group>"; };
+		7F14AAB12C72196FBB57F219 /* Pods_AirBase_AirBaseUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AirBase_AirBaseUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A12342370C8F04491F64E53F /* Pods-AirBaseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirBaseTests.release.xcconfig"; path = "Target Support Files/Pods-AirBaseTests/Pods-AirBaseTests.release.xcconfig"; sourceTree = "<group>"; };
+		B7A197CBC9F8579BB2917D51 /* Pods_AirBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AirBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8A474231A8A28CB251A1784 /* Pods-AirBase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirBase.debug.xcconfig"; path = "Target Support Files/Pods-AirBase/Pods-AirBase.debug.xcconfig"; sourceTree = "<group>"; };
+		D8C3F7ED8261E146413828A5 /* Pods_AirBaseTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AirBaseTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC502D334D0DB967CADF5FD7 /* Pods-AirBase-AirBaseUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AirBase-AirBaseUITests.debug.xcconfig"; path = "Target Support Files/Pods-AirBase-AirBaseUITests/Pods-AirBase-AirBaseUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F493C3CE2C294D02008B5098 /* AirBaseAppInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirBaseAppInfo.swift; sourceTree = "<group>"; };
+		F493C3D02C295407008B5098 /* AirBaseShowNearbyDevicesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirBaseShowNearbyDevicesView.swift; sourceTree = "<group>"; };
+		F493C3D22C29557D008B5098 /* AirBaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirBaseTableViewCell.swift; sourceTree = "<group>"; };
+		F493C3D42C2955B9008B5098 /* AirBaseCheckButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirBaseCheckButton.swift; sourceTree = "<group>"; };
+		F493C3D62C295804008B5098 /* AirBaseBgColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirBaseBgColors.swift; sourceTree = "<group>"; };
+		F493C3D82C297488008B5098 /* AirBaseDelegates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirBaseDelegates.swift; sourceTree = "<group>"; };
+		F493C3DA2C29A85B008B5098 /* AirBaseControllerUitilityExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirBaseControllerUitilityExtension.swift; sourceTree = "<group>"; };
+		F493C3DC2C29DECF008B5098 /* AirBaseCoinBaseConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirBaseCoinBaseConnection.swift; sourceTree = "<group>"; };
+		F493C3DE2C2AE317008B5098 /* AirBaseAlertWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirBaseAlertWindow.swift; sourceTree = "<group>"; };
+		F493C3E02C2BE357008B5098 /* AirBaseUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirBaseUserDefaults.swift; sourceTree = "<group>"; };
+		F493C3E22C2C7036008B5098 /* AirBaseKeyBoardInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirBaseKeyBoardInputView.swift; sourceTree = "<group>"; };
+		F493C3E42C2C708E008B5098 /* AirBaseNumberKeyPad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirBaseNumberKeyPad.swift; sourceTree = "<group>"; };
+		F49ED3F82C27CB520062D669 /* AirBase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirBase.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F49ED3FB2C27CB520062D669 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F49ED3FD2C27CB520062D669 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F49ED3FF2C27CB520062D669 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F49ED4022C27CB520062D669 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F49ED4042C27CB530062D669 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F49ED4072C27CB530062D669 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F49ED4092C27CB530062D669 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F49ED40E2C27CB530062D669 /* AirBaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirBaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F49ED4122C27CB530062D669 /* AirBaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirBaseTests.swift; sourceTree = "<group>"; };
+		F49ED4182C27CB530062D669 /* AirBaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AirBaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F49ED41C2C27CB530062D669 /* AirBaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirBaseUITests.swift; sourceTree = "<group>"; };
+		F49ED41E2C27CB530062D669 /* AirBaseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirBaseUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F49ED42F2C27CBB30062D669 /* AirBaseReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirBaseReceiver.swift; sourceTree = "<group>"; };
+		F49ED4312C27CBC60062D669 /* AirBaseSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirBaseSender.swift; sourceTree = "<group>"; };
+		F49ED4332C27CBD90062D669 /* AirBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirBaseViewController.swift; sourceTree = "<group>"; };
+		F49ED4352C27CBF50062D669 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F49ED4372C27CC0B0062D669 /* SendMoneyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMoneyViewController.swift; sourceTree = "<group>"; };
+		F49ED4392C27CC250062D669 /* ReceiveMoneyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveMoneyViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F49ED3F52C27CB520062D669 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F49ED42E2C27CB950062D669 /* NearbyConnections in Frameworks */,
+				E4106241AE8F3CAC2B044A4B /* Pods_AirBase.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F49ED40B2C27CB530062D669 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EE1D4754330F2323D14C2BD /* Pods_AirBaseTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F49ED4152C27CB530062D669 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A52BBDB64B405E4FA331FA89 /* Pods_AirBase_AirBaseUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F49ED3EF2C27CB520062D669 = {
+			isa = PBXGroup;
+			children = (
+				F49ED3FA2C27CB520062D669 /* AirBase */,
+				F49ED4112C27CB530062D669 /* AirBaseTests */,
+				F49ED41B2C27CB530062D669 /* AirBaseUITests */,
+				F49ED3F92C27CB520062D669 /* Products */,
+				F49ED42C2C27CB950062D669 /* Frameworks */,
+				FBC4499252835028CFA8F755 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		F49ED3F92C27CB520062D669 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F49ED3F82C27CB520062D669 /* AirBase.app */,
+				F49ED40E2C27CB530062D669 /* AirBaseTests.xctest */,
+				F49ED4182C27CB530062D669 /* AirBaseUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F49ED3FA2C27CB520062D669 /* AirBase */ = {
+			isa = PBXGroup;
+			children = (
+				F49ED3FB2C27CB520062D669 /* AppDelegate.swift */,
+				F49ED3FD2C27CB520062D669 /* SceneDelegate.swift */,
+				F49ED3FF2C27CB520062D669 /* ViewController.swift */,
+				F49ED4012C27CB520062D669 /* Main.storyboard */,
+				F49ED4042C27CB530062D669 /* Assets.xcassets */,
+				F49ED4062C27CB530062D669 /* LaunchScreen.storyboard */,
+				F49ED4092C27CB530062D669 /* Info.plist */,
+				F49ED42F2C27CBB30062D669 /* AirBaseReceiver.swift */,
+				F49ED4312C27CBC60062D669 /* AirBaseSender.swift */,
+				F49ED4332C27CBD90062D669 /* AirBaseViewController.swift */,
+				F49ED4352C27CBF50062D669 /* Extensions.swift */,
+				F49ED4372C27CC0B0062D669 /* SendMoneyViewController.swift */,
+				F49ED4392C27CC250062D669 /* ReceiveMoneyViewController.swift */,
+				F493C3CE2C294D02008B5098 /* AirBaseAppInfo.swift */,
+				F493C3D02C295407008B5098 /* AirBaseShowNearbyDevicesView.swift */,
+				F493C3D22C29557D008B5098 /* AirBaseTableViewCell.swift */,
+				F493C3D42C2955B9008B5098 /* AirBaseCheckButton.swift */,
+				F493C3D62C295804008B5098 /* AirBaseBgColors.swift */,
+				F493C3D82C297488008B5098 /* AirBaseDelegates.swift */,
+				F493C3DA2C29A85B008B5098 /* AirBaseControllerUitilityExtension.swift */,
+				F493C3DC2C29DECF008B5098 /* AirBaseCoinBaseConnection.swift */,
+				F493C3DE2C2AE317008B5098 /* AirBaseAlertWindow.swift */,
+				F493C3E02C2BE357008B5098 /* AirBaseUserDefaults.swift */,
+				F493C3E22C2C7036008B5098 /* AirBaseKeyBoardInputView.swift */,
+				F493C3E42C2C708E008B5098 /* AirBaseNumberKeyPad.swift */,
+			);
+			path = AirBase;
+			sourceTree = "<group>";
+		};
+		F49ED4112C27CB530062D669 /* AirBaseTests */ = {
+			isa = PBXGroup;
+			children = (
+				F49ED4122C27CB530062D669 /* AirBaseTests.swift */,
+			);
+			path = AirBaseTests;
+			sourceTree = "<group>";
+		};
+		F49ED41B2C27CB530062D669 /* AirBaseUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F49ED41C2C27CB530062D669 /* AirBaseUITests.swift */,
+				F49ED41E2C27CB530062D669 /* AirBaseUITestsLaunchTests.swift */,
+			);
+			path = AirBaseUITests;
+			sourceTree = "<group>";
+		};
+		F49ED42C2C27CB950062D669 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B7A197CBC9F8579BB2917D51 /* Pods_AirBase.framework */,
+				7F14AAB12C72196FBB57F219 /* Pods_AirBase_AirBaseUITests.framework */,
+				D8C3F7ED8261E146413828A5 /* Pods_AirBaseTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FBC4499252835028CFA8F755 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D8A474231A8A28CB251A1784 /* Pods-AirBase.debug.xcconfig */,
+				6E67ABBCBD4FF9F0F999ACBE /* Pods-AirBase.release.xcconfig */,
+				EC502D334D0DB967CADF5FD7 /* Pods-AirBase-AirBaseUITests.debug.xcconfig */,
+				2A8AF9647F71BB46B1F0B6DC /* Pods-AirBase-AirBaseUITests.release.xcconfig */,
+				6804FD1BA5B3285C11043BB0 /* Pods-AirBaseTests.debug.xcconfig */,
+				A12342370C8F04491F64E53F /* Pods-AirBaseTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F49ED3F72C27CB520062D669 /* AirBase */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F49ED4222C27CB530062D669 /* Build configuration list for PBXNativeTarget "AirBase" */;
+			buildPhases = (
+				8A05FF1CB9E9825853420599 /* [CP] Check Pods Manifest.lock */,
+				F49ED3F42C27CB520062D669 /* Sources */,
+				F49ED3F52C27CB520062D669 /* Frameworks */,
+				F49ED3F62C27CB520062D669 /* Resources */,
+				263E44C2676A9B230CD4BA6D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AirBase;
+			packageProductDependencies = (
+				F49ED42D2C27CB950062D669 /* NearbyConnections */,
+			);
+			productName = AirBase;
+			productReference = F49ED3F82C27CB520062D669 /* AirBase.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F49ED40D2C27CB530062D669 /* AirBaseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F49ED4252C27CB530062D669 /* Build configuration list for PBXNativeTarget "AirBaseTests" */;
+			buildPhases = (
+				992606992803A523488583A1 /* [CP] Check Pods Manifest.lock */,
+				F49ED40A2C27CB530062D669 /* Sources */,
+				F49ED40B2C27CB530062D669 /* Frameworks */,
+				F49ED40C2C27CB530062D669 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F49ED4102C27CB530062D669 /* PBXTargetDependency */,
+			);
+			name = AirBaseTests;
+			productName = AirBaseTests;
+			productReference = F49ED40E2C27CB530062D669 /* AirBaseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F49ED4172C27CB530062D669 /* AirBaseUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F49ED4282C27CB530062D669 /* Build configuration list for PBXNativeTarget "AirBaseUITests" */;
+			buildPhases = (
+				FA4E586AB2B0B3878D80D01C /* [CP] Check Pods Manifest.lock */,
+				F49ED4142C27CB530062D669 /* Sources */,
+				F49ED4152C27CB530062D669 /* Frameworks */,
+				F49ED4162C27CB530062D669 /* Resources */,
+				5DFEE458190BDF7EE080A5C2 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F49ED41A2C27CB530062D669 /* PBXTargetDependency */,
+			);
+			name = AirBaseUITests;
+			productName = AirBaseUITests;
+			productReference = F49ED4182C27CB530062D669 /* AirBaseUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F49ED3F02C27CB520062D669 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					F49ED3F72C27CB520062D669 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					F49ED40D2C27CB530062D669 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = F49ED3F72C27CB520062D669;
+					};
+					F49ED4172C27CB530062D669 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = F49ED3F72C27CB520062D669;
+					};
+				};
+			};
+			buildConfigurationList = F49ED3F32C27CB520062D669 /* Build configuration list for PBXProject "AirBase" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F49ED3EF2C27CB520062D669;
+			packageReferences = (
+				F49ED42B2C27CB860062D669 /* XCLocalSwiftPackageReference "../../../nearby" */,
+			);
+			productRefGroup = F49ED3F92C27CB520062D669 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F49ED3F72C27CB520062D669 /* AirBase */,
+				F49ED40D2C27CB530062D669 /* AirBaseTests */,
+				F49ED4172C27CB530062D669 /* AirBaseUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F49ED3F62C27CB520062D669 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F49ED4052C27CB530062D669 /* Assets.xcassets in Resources */,
+				F49ED4082C27CB530062D669 /* Base in Resources */,
+				F49ED4032C27CB520062D669 /* Base in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F49ED40C2C27CB530062D669 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F49ED4162C27CB530062D669 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		263E44C2676A9B230CD4BA6D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AirBase/Pods-AirBase-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AirBase/Pods-AirBase-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AirBase/Pods-AirBase-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5DFEE458190BDF7EE080A5C2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AirBase-AirBaseUITests/Pods-AirBase-AirBaseUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AirBase-AirBaseUITests/Pods-AirBase-AirBaseUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AirBase-AirBaseUITests/Pods-AirBase-AirBaseUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A05FF1CB9E9825853420599 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AirBase-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		992606992803A523488583A1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AirBaseTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA4E586AB2B0B3878D80D01C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AirBase-AirBaseUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F49ED3F42C27CB520062D669 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F493C3DD2C29DECF008B5098 /* AirBaseCoinBaseConnection.swift in Sources */,
+				F49ED4302C27CBB30062D669 /* AirBaseReceiver.swift in Sources */,
+				F49ED4382C27CC0B0062D669 /* SendMoneyViewController.swift in Sources */,
+				F49ED4002C27CB520062D669 /* ViewController.swift in Sources */,
+				F493C3E32C2C7036008B5098 /* AirBaseKeyBoardInputView.swift in Sources */,
+				F49ED4342C27CBD90062D669 /* AirBaseViewController.swift in Sources */,
+				F493C3E12C2BE357008B5098 /* AirBaseUserDefaults.swift in Sources */,
+				F49ED4322C27CBC60062D669 /* AirBaseSender.swift in Sources */,
+				F493C3DF2C2AE317008B5098 /* AirBaseAlertWindow.swift in Sources */,
+				F49ED3FC2C27CB520062D669 /* AppDelegate.swift in Sources */,
+				F493C3D52C2955B9008B5098 /* AirBaseCheckButton.swift in Sources */,
+				F49ED3FE2C27CB520062D669 /* SceneDelegate.swift in Sources */,
+				F493C3DB2C29A85B008B5098 /* AirBaseControllerUitilityExtension.swift in Sources */,
+				F493C3D32C29557D008B5098 /* AirBaseTableViewCell.swift in Sources */,
+				F493C3E52C2C708E008B5098 /* AirBaseNumberKeyPad.swift in Sources */,
+				F493C3CF2C294D02008B5098 /* AirBaseAppInfo.swift in Sources */,
+				F493C3D92C297488008B5098 /* AirBaseDelegates.swift in Sources */,
+				F493C3D72C295804008B5098 /* AirBaseBgColors.swift in Sources */,
+				F49ED4362C27CBF50062D669 /* Extensions.swift in Sources */,
+				F49ED43A2C27CC250062D669 /* ReceiveMoneyViewController.swift in Sources */,
+				F493C3D12C295407008B5098 /* AirBaseShowNearbyDevicesView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F49ED40A2C27CB530062D669 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F49ED4132C27CB530062D669 /* AirBaseTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F49ED4142C27CB530062D669 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F49ED41F2C27CB530062D669 /* AirBaseUITestsLaunchTests.swift in Sources */,
+				F49ED41D2C27CB530062D669 /* AirBaseUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F49ED4102C27CB530062D669 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F49ED3F72C27CB520062D669 /* AirBase */;
+			targetProxy = F49ED40F2C27CB530062D669 /* PBXContainerItemProxy */;
+		};
+		F49ED41A2C27CB530062D669 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F49ED3F72C27CB520062D669 /* AirBase */;
+			targetProxy = F49ED4192C27CB530062D669 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F49ED4012C27CB520062D669 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F49ED4022C27CB520062D669 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F49ED4062C27CB530062D669 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F49ED4072C27CB530062D669 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F49ED4202C27CB530062D669 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F49ED4212C27CB530062D669 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F49ED4232C27CB530062D669 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8A474231A8A28CB251A1784 /* Pods-AirBase.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D5HQUY6293;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AirBase/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sai.AirBase.AirBase;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F49ED4242C27CB530062D669 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E67ABBCBD4FF9F0F999ACBE /* Pods-AirBase.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D5HQUY6293;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = AirBase/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sai.AirBase.AirBase;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F49ED4262C27CB530062D669 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6804FD1BA5B3285C11043BB0 /* Pods-AirBaseTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D5HQUY6293;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sai.AirBase.AirBaseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AirBase.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AirBase";
+			};
+			name = Debug;
+		};
+		F49ED4272C27CB530062D669 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A12342370C8F04491F64E53F /* Pods-AirBaseTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D5HQUY6293;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sai.AirBase.AirBaseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AirBase.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/AirBase";
+			};
+			name = Release;
+		};
+		F49ED4292C27CB530062D669 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC502D334D0DB967CADF5FD7 /* Pods-AirBase-AirBaseUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D5HQUY6293;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sai.AirBase.AirBaseUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AirBase;
+			};
+			name = Debug;
+		};
+		F49ED42A2C27CB530062D669 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A8AF9647F71BB46B1F0B6DC /* Pods-AirBase-AirBaseUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = D5HQUY6293;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sai.AirBase.AirBaseUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AirBase;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F49ED3F32C27CB520062D669 /* Build configuration list for PBXProject "AirBase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F49ED4202C27CB530062D669 /* Debug */,
+				F49ED4212C27CB530062D669 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F49ED4222C27CB530062D669 /* Build configuration list for PBXNativeTarget "AirBase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F49ED4232C27CB530062D669 /* Debug */,
+				F49ED4242C27CB530062D669 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F49ED4252C27CB530062D669 /* Build configuration list for PBXNativeTarget "AirBaseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F49ED4262C27CB530062D669 /* Debug */,
+				F49ED4272C27CB530062D669 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F49ED4282C27CB530062D669 /* Build configuration list for PBXNativeTarget "AirBaseUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F49ED4292C27CB530062D669 /* Debug */,
+				F49ED42A2C27CB530062D669 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		F49ED42B2C27CB860062D669 /* XCLocalSwiftPackageReference "../../../nearby" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../../nearby;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F49ED42D2C27CB950062D669 /* NearbyConnections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F49ED42B2C27CB860062D669 /* XCLocalSwiftPackageReference "../../../nearby" */;
+			productName = NearbyConnections;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = F49ED3F02C27CB520062D669 /* Project object */;
+}
