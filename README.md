@@ -21,20 +21,43 @@ View the [Sender POV video](https://drive.google.com/file/d/1GqaN0pWE8gkfUaPbbsf
 
 View the [Receiver POV video](https://drive.google.com/file/d/1Gwzr3xW_xrdz-yHNtdbLB8lZXVbwan2J/view) to see AirBase Receiver flow in action.
 
+### Onboarding
 
-![Onboarding](assets/Onboarding.png)
-![HomeScreen](assets/HomeScreen.png)
-![NearbyDevices](assets/NearbyDevices.png)
-![Transaction](assets/Transaction.png)
-![SenderConfirmation](assets/SenderConfirmation.png)
-![ReceiverScreen](assets/Receiver.png)
-![ReceiverConfirmation](assets/ReceiverConfirmation.png)
+<img src="assets/Onboarding.png" width="100">
+
+### Home Screen
+
+<img src="assets/HomeScreen.png" width="100">
+
+### Nearby Devices
+
+<img src="assets/NearbyDevices.png" width="100">
+
+### Transaction
+
+<img src="assets/Transaction.png" width="100">
+
+### Sender Confirmation
+
+<img src="assets/SenderConfirmation.png" width="100">
+
+#### Receiver Screen
+
+<img src="assets/Receiver.png" width="100">
+
+### Receiver Confirmation
+
+<img src="assets/ReceiverConfirmation.png" width="100">
 
 ## Future Prospects
 
 - AirBase can be adapted for use in day-to-day commerce, such as POS setups where the terminal requires connectivity but not the purchaser. This could enable millions across the world with limited connectivity to use crypto.
 
-## AirBase in Action
+## Technology Stack
+
+- **Google Nearby:** Used to discover nearby devices and exchange public addresses.
+- **Coinbase Wallet:** Used to send and receive Ethereum on the Base Network.
+- **Swift:** Used to develop the iOS application.
 
 ## Challenges Faced
 
