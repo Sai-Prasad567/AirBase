@@ -25,6 +25,7 @@ class AirBaseShowNearbyDevicesView: UIViewController, AirBaseShowDevicesDelegate
     var startButton = UIButton()
     var selectedButton : [Int:Bool] = [:]
     var count = 0
+    var dictIndex = 0
     weak var delegate: AirBaseNearbyDelegates?
     weak var delegate1: AirBaseNearbyDevicesDelegate?
     
@@ -74,7 +75,7 @@ class AirBaseShowNearbyDevicesView: UIViewController, AirBaseShowDevicesDelegate
     }
     
     @objc func startTransactions(_ button: UIButton){
-        delegate1?.setNearByData(toAddress: devicesList[0])
+        delegate1?.setNearByData(toAddress: devicesList[dictIndex])
         self.dismiss(animated: true)
     }
     
@@ -114,6 +115,7 @@ extension AirBaseShowNearbyDevicesView: UITableViewDelegate, UITableViewDataSour
         self.startButton.isHidden = false
         self.count = count + 1
         if let abd = selectedButton[button.tag] {
+            dictIndex = button.tag
             selectedButton[button.tag] = true
         }
         else {

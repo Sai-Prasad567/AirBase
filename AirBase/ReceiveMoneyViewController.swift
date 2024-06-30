@@ -5,20 +5,18 @@
 //  Created by Sai Prasad on 22/06/24.
 //
 
-import Foundation
-
 import UIKit
 
-class ReceiveMoneyViewController: UIViewController {
+class ReceiveMoneyViewController: UIViewController, AirBaseTransactionUpdates {
     
     weak var delegate: AirBaseNearbyDelegates?
     let connectedString = "Connected To "
-    let connectingString = "Waiting for sender..."
+    let connectingString = "Waiting for sender to connect..."
     var isConnecting : Bool = false
     
     lazy var headerLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 22)
+        label.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 28)
         label.textColor = AirBaseBgColors.shared.whiteColor
         label.text = connectingString
         return label
@@ -26,8 +24,15 @@ class ReceiveMoneyViewController: UIViewController {
     
     lazy var transactionID: UILabel = {
         let label = UILabel()
-        label.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 17)
-        label.textColor = UIColor(red: 170.0 / 255.0, green: 172.0 / 255.0, blue: 178.0 / 255.0, alpha: 1.0)
+        label.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 28)
+        label.textColor = AirBaseBgColors.shared.whiteColor
+        return label
+    }()
+    
+    lazy var transactionAmount: UILabel = {
+        let label = UILabel()
+        label.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 35)
+        label.textColor = AirBaseBgColors.shared.blueColor
         return label
     }()
     
@@ -49,10 +54,11 @@ class ReceiveMoneyViewController: UIViewController {
     func setAllViews() {
         self.view.addSubview(headerLabel)
         self.view.addSubview(transactionID)
+        self.view.addSubview(transactionAmount)
         
-        headerLabel.addConstraint(top: view.topAnchor, leading: view.leadingAnchor, bottom: nil, trailing: nil, padding: UIEdgeInsets(top: 110, left: 20, bottom: 0, right: 0))
+        headerLabel.addConstraint(top: view.topAnchor, leading: nil, bottom: nil, trailing: nil, padding: UIEdgeInsets(top: 150, left: 0, bottom: 0, right: 0),centerX: view.centerXAnchor)
         
-        transactionID.addConstraint(top: headerLabel.bottomAnchor, leading: nil, bottom: nil, trailing: nil, padding: UIEdgeInsets(top: 30, left: 0, bottom: 0, right: 0),centerX: view.centerXAnchor)
+        transactionAmount.addConstraint(top: headerLabel.bottomAnchor, leading: nil, bottom: nil, trailing: nil, padding: UIEdgeInsets(top: 30, left: 0, bottom: 0, right: 0),centerX: view.centerXAnchor)
         
         let size = connectingString.getSizeOfatributedString(neededFont: headerLabel.font)
         headerLabel.frame.size = size
@@ -72,5 +78,9 @@ class ReceiveMoneyViewController: UIViewController {
         delegate?.stopAdvertiser()
         self.navigationController?.popViewController(animated: true)
     }
+    
+    func setTransactionId(_ id: String) {
+        transactionAmount.text = "$1"
+        headerLabel.text = "Received amount from Sai"
+    }
 }
-

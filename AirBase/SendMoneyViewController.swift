@@ -24,14 +24,16 @@ class SendMoneyViewController: UIViewController {
     }()
     
     var sendButt = UIButton()
+    var receiverName = String()
     
     weak var delegate: AirBaseNearbyDelegates?
     weak var coinbaseDelegate: AirBaseCoinBaseDelegates?
     let numberKeyPad = AirBaseNumberKeyPad()
     let divider = UIView()
     
-    init(){
+    init(name: String){
         super.init(nibName: nil, bundle: nil)
+        self.receiverName = name
         self.setTransactionViews()
         setButtonViews()
         var image = UIImage.init(named: "back")?.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
@@ -95,13 +97,18 @@ class SendMoneyViewController: UIViewController {
         // Action Required, Choose an action
         let yesAction = UIAlertAction(title: "Yes", style: .default) { _ in
             self.addTaskField.text?.removeFirst()
+            var amo = ""
             if let text = self.addTaskField.text, text != "" {
+                amo = text
                 self.coinbaseDelegate?.callCoinBaseApp(weiValue: text)
             }
+            
             self.addTaskField.text = "$0"
             self.sendButt.alpha = 0.5
             self.sendButt.isUserInteractionEnabled = false
             self.numberKeyPad.numStr = ""
+            self.delegate?.showTransactionViewToSender(name: self.receiverName, amount: amo)
+            self.backButtonPressed()
         }
         
         let noAction = UIAlertAction(title: "No", style: .cancel) { _ in
@@ -113,23 +120,6 @@ class SendMoneyViewController: UIViewController {
         
         self.present(alertController, animated: true, completion: nil)
     }
-    
-//    @objc func textFieldDidChange(_ textField: UITextField) {
-//        if let text = textField.text, !text.isEmpty {
-//            self.sendButton.alpha = 1
-//            self.sendButton.isSelected = true
-//        }
-//        else {
-//            self.sendButton.alpha = 0.5
-//            self.sendButton.isSelected = false
-//        }
-//    }
-//    
-//    private func validateAmount(_ amount: String) -> Bool {
-//        let amountRegex = "^[0-9]*((\\.[0-9]{0,2})?)?$"
-//        let amountTest = NSPredicate(format: "SELF MATCHES %@", amountRegex)
-//        return amountTest.evaluate(with: amount)
-//    }
 }
 
 extension SendMoneyViewController: AirBaseInputViewDelegate {
@@ -161,24 +151,3 @@ extension SendMoneyViewController: AirBaseInputViewDelegate {
         
     }
 }
-
-//extension SendMoneyViewController: UITextFieldDelegate {
-//    
-//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-//        let currentText = textField.text ?? ""
-//        guard let strRange = Range(range,in: currentText) else {
-//            return false
-//        }
-//        let text = currentText.replacingCharacters(in: strRange, with: string)
-//        return validateAmount(text)
-//    }
-//    
-//    func textFieldDidBeginEditing(_ textField: UITextField) {
-//        
-//    }
-//    
-//    func textFieldDidEndEditing(_ textField: UITextField) {
-//        
-//    }
-//}
-

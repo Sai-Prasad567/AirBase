@@ -29,13 +29,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if (try? CoinbaseWalletSDK.shared.handleResponse(url)) == true {
             let keyWindow = (UIApplication.shared.keyWindow?.rootViewController as! UINavigationController).topViewController
             if let vc = keyWindow as? AirBaseViewController {
-                vc.showToast(message: "Coinbase address is registered")
+                if !vc.isTrue {
+                    vc.showToast(message: "Coinbase address is registered")
+                }
                 if AirBaseUserDefaults.value(forKey: "Name") == nil {
                     vc.addTaskField.isHidden = false
                 }
                 else {
                     vc.startButton.isHidden = false
                 }
+                vc.isTrue = true
             }
             return true
         }

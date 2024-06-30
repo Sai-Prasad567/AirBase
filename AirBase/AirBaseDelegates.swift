@@ -12,7 +12,7 @@ import CoinbaseWalletSDK
 protocol AirBaseNearbyDelegates: NSObjectProtocol {
     func stopDiscovery()
     func stopAdvertiser()
-    func setReceiverName(name: String)
+    func showTransactionViewToSender(name: String, amount: String)
 }
 
 protocol AirBaseShowDevicesDelegates: NSObjectProtocol {
@@ -32,4 +32,6 @@ protocol AirBaseInputViewDelegate: NSObjectProtocol {
     func deleteButtonPressed(text: String)
 }
 
-
+protocol AirBaseTransactionUpdates: NSObjectProtocol {
+    func setTransactionId(_ id: String)
+}

@@ -9,14 +9,12 @@ import NearbyConnections
 import UIKit
 
 class AirBaseViewController: UIViewController, AirBaseNearbyDelegates, AirBaseShowDevicesDelegates {
-    struct Model: Hashable {
-        
-    }
     
     var sendButton = UIButton()
     var receiveButton = UIButton()
     var startButton = UIButton()
     var getAddressButton = UIButton()
+    var isTrue : Bool = false
     var sendMoneyCtrl: SendMoneyViewController?
     var discover: AirBaseSender?
     var advertiser: AirBaseReceiver?
@@ -27,14 +25,14 @@ class AirBaseViewController: UIViewController, AirBaseNearbyDelegates, AirBaseSh
     let welcomeString = "Welcome "
     var userName = ""
     var receiverUserName = ""
+    var transactionCompleteView: AirBaseTransactionView?
     
     lazy var addTaskField: AirBaseTextField = {
         let textField = AirBaseTextField()
         textField.placeholder = "Enter Username"
         textField.layer.cornerRadius = 40 / 2
         textField.layer.borderWidth = 1
-        textField.layer.borderColor = UIColor(red: 7.0 / 255.0, green: 173.0 / 255.0, blue: 104.0 / 255.0, alpha: 1.0).cgColor
-        textField.tintColor = UIColor(red: 7.0 / 255.0, green: 173.0 / 255.0, blue: 104.0 / 255.0, alpha: 1.0)
+        textField.layer.borderColor = AirBaseBgColors.shared.blueColor.cgColor
         textField.backgroundColor = AirBaseBgColors.shared.bGColorW_bGColorD
         textField.textColor = AirBaseBgColors.shared.blueColor
         textField.returnKeyType = .done
@@ -206,8 +204,10 @@ class AirBaseViewController: UIViewController, AirBaseNearbyDelegates, AirBaseSh
         advertiser?.advertiser.stopAdvertising()
     }
     
-    func setReceiverName(name: String) {
-        self.receiverUserName = name
+    func showTransactionViewToSender(name: String, amount: String) {
+        transactionCompleteView = AirBaseTransactionView(name: name, amount: amount)
+        transactionCompleteView?.modalPresentationStyle = .fullScreen
+        self.present(transactionCompleteView ?? UIViewController(), animated: true)
     }
     
     func showCustomizeController(ctrl: UIViewController) {
@@ -215,17 +215,20 @@ class AirBaseViewController: UIViewController, AirBaseNearbyDelegates, AirBaseSh
     }
     
     func showNearbyDevices(endpointID: EndpointID, data: String, deviceName: String) {
-        if receiveMoneyCtrl != nil, receiveMoneyCtrl?.isConnecting == true {
-            receiveMoneyCtrl?.headerLabel.text = (receiveMoneyCtrl?.connectedString ?? "") + deviceName
-            let size = deviceName.getSizeOfatributedString(neededFont: receiveMoneyCtrl!.headerLabel.font)
-            receiveMoneyCtrl?.headerLabel.frame.size = size
-        }
         delegate?.showNearbyDevices(endpointID: endpointID, data: data, deviceName: deviceName)
     }
     
     func showToast(message: String) {
         let promptView =  AirBaseAlertWindow(message: message)
         promptView.show(viewCtrl: self)
+    }
+}
+
+extension AirBaseViewController: AirBaseTransactionUpdates {
+    func setTransactionId(_ id: String) {
+//        transactionCompleteView?.transactionID.text = id
+//        receiveMoneyCtrl?.transactionID.text = id
+//        receiveMoneyCtrl?.headerLabel.text = "Received"
     }
 }
 
@@ -243,6 +246,7 @@ extension AirBaseViewController:  UITextFieldDelegate {
     func validateUsername() -> Bool{
         if let username = addTaskField.text, !username.isEmpty {
             AirBaseUserDefaults.set(username, forKey: "Name")
+            self.userName = username
             headerLabel.text = welcomeString + username
             headerLabel.isHidden = false
             return true
@@ -263,10 +267,11 @@ extension AirBaseViewController: AirBaseCoinBaseDelegates {
 
 extension AirBaseViewController: AirBaseNearbyDevicesDelegate {
     func setNearByData(toAddress: String) {
-        self.sendMoneyCtrl = SendMoneyViewController()
+        self.sendMoneyCtrl = SendMoneyViewController(name: toAddress)
         self.sendMoneyCtrl?.delegate = self
         self.sendMoneyCtrl?.coinbaseDelegate = self
         self.showCustomizeController(ctrl: sendMoneyCtrl ?? UIViewController())
 //        self.discover?.coinbaseConnection.makeCoinbaseRequests(receiverAddress: toAddress)
     }
 }
+
