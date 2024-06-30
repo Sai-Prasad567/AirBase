@@ -11,6 +11,7 @@ class AirBaseCoinBaseConnection {
     
     private let cbwallet = CoinbaseWalletSDK.shared
     var address = ""
+    weak var delegate: AirBaseTransactionUpdates?
     init() {
         
     }
@@ -34,12 +35,14 @@ class AirBaseCoinBaseConnection {
     }
     
     func makeCoinbaseRequests(receiverAddress:String, weiValue: String) {
-        print("makeCoinbaseRequests.. \(receiverAddress)... \(self.address)")
         cbwallet.makeRequest(
             Request(actions: [
-                Action(jsonRpc: .eth_sendTransaction(fromAddress: self.address, toAddress: receiverAddress, weiValue: weiValue, data: "0x", nonce: 1, gasPriceInWei: nil, maxFeePerGas: nil, maxPriorityFeePerGas: nil, gasLimit: nil, chainId: "8453"))
+                Action(jsonRpc: .eth_sendTransaction(fromAddress: self.address, toAddress: receiverAddress, weiValue: weiValue, data: "0x", nonce: nil, gasPriceInWei: "1", maxFeePerGas: "1", maxPriorityFeePerGas: "1", gasLimit: "50000", chainId: "8453"))
             ])) { result in
-                print(result)
+                print("The result is \(result)")
+                let ab = result.map { ab in
+                    self.delegate?.setTransactionId(ab.uuid.uuidString)
+                }
             }
     }
 }
