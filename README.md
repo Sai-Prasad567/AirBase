@@ -7,6 +7,7 @@ The integration with Coinbase Wallet is seamless, and sending and receiving cryp
 ## Features
 
 - **Seamless Integration:** AirBase handles the process of discovering nearby entities and retrieving their Base Network Wallet addresses.
+- **Instant Discovery:** AirBase leverages Bluetooth and Wi-Fi using Google Nearby API to find and discover nearby active devices.
 - **Cryptocurrency Support:** The application currently supports sending and receiving Ethereum on the Base Network. It is designed to be easily extended to support other cryptocurrencies and networks in the future.
 - **Connectivity Requirements:** AirBase requires internet connectivity only from the sender's end. Future versions could be re-architected to require internet connectivity from either the sender or the receiver, enhancing the application's usability in areas with limited connectivity.
 
